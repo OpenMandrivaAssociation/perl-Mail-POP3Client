@@ -14,6 +14,7 @@ Source:		http://search.cpan.org/CPAN/authors/id/S/SD/SDOWD/%{realname}-%{version
 %if %{mdkversion} < 1010
 Buildrequires:perl-devel
 %endif
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Buildarch:	noarch
 Obsoletes:  perl-POP3Client <= 2.13
 Provides:   POP3Client = %version
