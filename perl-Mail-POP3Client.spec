@@ -1,6 +1,6 @@
 %define name perl-%{realname}
 %define realname Mail-POP3Client
-%define version 2.17
+%define version 2.18
 %define release %mkrel 1
 
 Name:		%{name}
