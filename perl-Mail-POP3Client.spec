@@ -1,7 +1,7 @@
 %define name perl-%{realname}
 %define realname Mail-POP3Client
 %define version 2.18
-%define release %mkrel 3
+%define release %mkrel 4
 
 Name:		%{name}
 Summary:	POP3Client module for perl (Mail_and_Usenet_News/Mail)
