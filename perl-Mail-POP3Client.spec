@@ -1,31 +1,30 @@
-%define name perl-%{realname}
-%define realname Mail-POP3Client
-%define version 2.18
-%define release %mkrel 4
+%define upstream_name    Mail-POP3Client
+%define upstream_version 2.18
 
-Name:		%{name}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	POP3Client module for perl (Mail_and_Usenet_News/Mail)
-Version:	%{version}
-Release:	%{release}
 License:	GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{realname}
-Source:		http://search.cpan.org/CPAN/authors/id/S/SD/SDOWD/%{realname}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/S/SD/SDOWD/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 Buildrequires:perl-devel
 %endif
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Buildarch:	noarch
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 Obsoletes:  perl-POP3Client <= 2.13
-Provides:   POP3Client = %version
+Provides:   POP3Client = %{version}
 
 %description
 POP3Client is a Perl module to provide an object-oriented interface to a
 POP3 server.
 
 %prep 
-
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 
@@ -47,4 +46,3 @@ CFLAGS="$RPM_OPT_FLAGS" %{__perl} Makefile.PL INSTALLDIRS=vendor
 %doc Changes  MANIFEST README
 %{perl_vendorlib}/Mail/
 %_mandir/man3/*
-
