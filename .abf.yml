@@ -1,2 +1,4 @@
+removed_sources:
+  Mail-POP3Client-2.18.tar.bz2: 6de2e03b23c1062c346284398778c8706df89214
 sources:
-  "Mail-POP3Client-2.18.tar.bz2": 6de2e03b23c1062c346284398778c8706df89214
+  Mail-POP3Client-2.19.tar.gz: b1bb721a0bbc8964394068b4ca4401c58b483102
