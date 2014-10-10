@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 
 Summary:	POP3Client module for perl (Mail_and_Usenet_News/Mail)
 License:	GPL
