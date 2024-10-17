@@ -8,7 +8,7 @@ Release:	3
 Summary:	POP3Client module for perl (Mail_and_Usenet_News/Mail)
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/S/SD/SDOWD/Mail-POP3Client-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
