@@ -1,15 +1,15 @@
 %define upstream_name    Mail-POP3Client
-%define upstream_version 2.19
+%define upstream_version 2.21
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	POP3Client module for perl (Mail_and_Usenet_News/Mail)
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/S/SD/SDOWD/Mail-POP3Client-%{upstream_version}.tar.gz
+Url:		https://github.com/ssdowd/mail-pop3client
+Source0:	https://cpan.metacpan.org/authors/id/S/SD/SDOWD/Mail-POP3Client-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
