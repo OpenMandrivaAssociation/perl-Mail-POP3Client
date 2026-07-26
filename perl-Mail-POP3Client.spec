@@ -1,15 +1,13 @@
 %define upstream_name    Mail-POP3Client
-%define upstream_version 2.21
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	2.21
+Release:	2
 
 Summary:	POP3Client module for perl (Mail_and_Usenet_News/Mail)
 License:	GPL
 Group:		Development/Perl
 Url:		https://github.com/ssdowd/mail-pop3client
-Source0:	https://cpan.metacpan.org/authors/id/S/SD/SDOWD/Mail-POP3Client-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/SD/SDOWD/Mail-POP3Client-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ POP3Client is a Perl module to provide an object-oriented interface to a
 POP3 server.
 
 %prep 
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 CFLAGS="%{optflags}" perl Makefile.PL INSTALLDIRS=vendor
@@ -44,9 +42,7 @@ make test
 %changelog
 * Mon Aug 03 2009 Jérôme Quelin <jquelin@mandriva.org> 2.180.0-1mdv2010.0
 + Revision: 407794
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 2.18-4mdv2009.0
+- rebuild using %2.21 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 2.18-4mdv2009.0
 + Revision: 257689
 - rebuild
 
